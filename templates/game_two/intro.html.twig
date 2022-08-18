@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '2 · Choisir LES MOTS'|trans }}
+{% endblock %}
+{% set page_title = '2 · Choisir LES MOTS'|trans %}
+
+{% block body %}
+	<section class="game_two_intro single_game_intro orange_bg">
+		<div class="container">
+			<div class="game_one_hero">
+				<h1><span class="green">{{ 'Choisir LES MOTS'|trans }}</span></h1>
+				<p>{{ "On s'est tous déjà senti démunis pour parler à un proche en souffrance. Apprends à choisir les mots."|trans }}</p>
+				<br>
+				<p>{{ 'Choisis la réponse qui te semble la plus adaptée à la conversation.'|trans }}</p>
+
+				<div class="ready_btn">
+					<a href="{{ path('game_two_game') }}" class="btn btn_orange">{{ 'Commencer'|trans }}</a>
+				</div>
+			</div>
+		</div>
+		
+		<img class="bottom_left_bg" src="{{ asset('assets/img/game2_intro.png') }}" alt="Choisir LES MOTS">
+	</section>
+{% endblock %}

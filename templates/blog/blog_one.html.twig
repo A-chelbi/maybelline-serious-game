@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'GAME 1'|trans }}
+{% endblock %}
+
+{% block body %}
+	<div class="blog">
+		{% include 'partials/components/_sticky_menu_share.html.twig' %}
+
+		<section class="article_game">
+			<div class="article_hero">
+				<h1>{{ 'RePéRER LES SIGNES'|trans }}</h1>
+				
+				<img src="{{ asset('assets/img/game1.png') }}" alt="Game 1 article hero">
+				
+				{% include 'partials/components/_sticky_menu_share.html.twig' %}
+			</div>
+
+			<div class="article_grid">
+				<div class="article_grid_gallery"></div>
+
+				<div class="article_grid_info small">
+					<h5>{{ 'Les signes de mal-être, d’anxiété et de dépression ne se limitent pas aux 5 présentés dans le jeu. D’autres peuvent être présents comme le manque de motivation, l’isolement, le repli sur soi, les troubles obsessionnels compulsifs (TOC), les crises d’angoisse, les automutilations, les idées noires pouvant aller jusqu’à des idées suicidaires …'|trans }}</h5>
+				</div>
+			</div>
+		</section>
+
+		<section class="article_content">
+			<div class="article_grid_info">
+				<h2>{{ 'Etre attentif au changement'|trans }}</h2>
+				<p>{{ 'De manière générale, il est important d’être attentif aux changements d’habitudes et d’attitudes. Ces changements, lorsque l’on est proche, sont repérables et souvent nous donnent l’intuition que quelque chose ne va pas.'|trans }}</p>
+				<br>
+				<p>{{ 'Ils sont souvent signes de souffrance. '|trans }}</p>
+				<p>{{ 'C’est leur observation dans la durée, leur intensité et leur impact sur la vie quotidienne de la personne qui vont nous alerter sur son besoin d’être aidée.'|trans }}</p>
+			</div>
+
+			<div class="article_grid_info">
+				<h2>{{ 'Comprendre ce qui peut se jouer'|trans }}</h2>
+				<p>{{ 'La dépression et l’anxiété ne sont pas des faiblesses de caractère mais de vraies maladies qu’il faut prendre au sérieux. Il faut comprendre que ce n’est pas un manque de volonté de s’en sortir mais une réelle souffrance.'|trans }}</p>
+				<br>
+				<p>{{ 'Il faut avoir en tête que la personne touchée par un trouble psychique n’a pas forcément conscience de ce qu’elle vit ou de son intensité et c’est souvent dans le regard et les attentions des autres qu’elle peut s’en rendre compte.'|trans }}</p>
+				<br>
+				<p>{{ 'Oser aborder avec elle ce que tu as observé dans ses comportements, ses changements d’attitudes, lui exprimer que tu t’inquiètes pour elle, c’est lui permettre de prendre conscience de ce qu’elle vit. L’attention que tu lui porteras lui fera comprendre qu’elle n’est pas seule et lui fera du bien.'|trans }}
+			</div>
+
+			<div class="article_grid_info">
+				<h2>{{ 'Aller vers l’autre'|trans }}</h2>
+				<p>{{ 'Il peut être difficile parfois de faire cette démarche d’aller vers la personne pour lui demander comment elle se sent, de parler de ses émotions, de ce qu’elle ressent. On peut hésiter à en parler avec elle pour de nombreuses raisons : peur de lui faire parler de choses qui la font souffrir, impression de se mêler de choses qui ne nous regardent pas, sentiment que c’est à elle de le faire si elle le souhaite.'|trans }}</p>
+				<br>
+				<p>{{ 'Toutes ces raisons sont bienveillantes mais ne prennent pas en compte qu’elle n’ose peut-être pas en parler. Sa tendance à s’isoler et à cacher ses problèmes peuvent l’empêcher de se confier et d’engager des démarches pour aller mieux. En effet ses peurs, ses angoisses, son manque d’énergie ou de motivation peuvent générer chez elle de la honte et de la culpabilité.'|trans }}</p>
+				<br>
+				<p>{{ 'Cette démarche d’aller vers l’autre peut être compliquée, car on ne sait pas toujours si on va trouver les mots justes et les bonnes attitudes. Malgré tout il faut savoir dépasser ses appréhensions et se lancer…'|trans }}
+			</div>
+
+			<div class="article_grid_info small article_positioning">
+			<div class="face_and_citation">
+				<h3 class="right_citation">{{ '“ Ce n’est pas intrusif de s’inquiéter pour'|trans }}</h3></div>
+				<h3 class="bottom_title_position">{{ 'quelqu’un et de le lui dire avec bienveillance et empathie. C’est une première étape dans la démarche d’aide ”'|trans }}</h3>
+				<div class="tablet_face_and_citation">
+				<img class="tablet_author_face" src="{{ asset('assets/img/charlotte.png') }}" alt="Charlotte Lecru">
+				<div class="charlotte_intro">
+				<span class="article_author">{{ 'Charlotte Lecru,'|trans }}</span><br>
+				<span class="article_author">{{ 'Psychologue Unafam'|trans }}</span>
+			</div></div></div>
+			<div class="article_grid_info">
+				<a href="{{ path('blog_two') }}" class="btn btn_orange cta_button">{{ "Choisir les mots"|trans }}</a><br><br><br>
+			</div>
+		</section>
+	</div>
+{% endblock %}

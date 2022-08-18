@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '2 · Choisir LES MOTS.'|trans }}
+{% endblock %}
+{% set page_title = '2 · Choisir LES MOTS.'|trans %}
+{% set game_title = 'Choisir les mots'|trans %}
+
+{% block body %}
+	{# Part one #}
+	{% include 'partials/components/game_two/_part_one.html.twig' %}
+	{# Part two #}
+	{% include 'partials/components/game_two/_part_two.html.twig' %}
+
+	{# Modal content #}
+	{% include 'partials/components/_game_modal.html.twig' with {'field': game_title } %}
+
+{% endblock %}

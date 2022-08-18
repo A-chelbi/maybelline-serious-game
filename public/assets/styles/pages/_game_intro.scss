@@ -1,0 +1,112 @@
+.back_arrow_link {
+    transition: ease-in 0.3s;
+
+    &:hover {
+        transform: translateX(-30px);
+    }
+}
+
+/*------------------------------------------------------------------
+[Genral Game Intro __Hero] 
+*/
+.general_intro {
+    position: relative;
+    min-height: 131vh;
+
+    &.hero {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        @include breakpoint(mobile) {
+            background: -webkit-linear-gradient(66deg, $green 63%, rgba(0, 0, 0, 0) 30%),
+                -webkit-linear-gradient(141deg, $pink 61%, $orange 51%);
+            background: -o-linear-gradient(66deg, $green 63%, rgba(0, 0, 0, 0) 30%),
+                -o-linear-gradient(141deg, $pink 61%, $orange 51%);
+            background: -moz-linear-gradient(66deg, $green 63%, rgba(0, 0, 0, 0) 30%),
+                -moz-linear-gradient(141deg, $pink 61%, $orange 51%);
+            background: linear-gradient(66deg, $green 63%, rgba(0, 0, 0, 0) 30%),
+                linear-gradient(141deg, $pink 61%, $orange 51%);
+        }
+    }
+
+    .bottom_left_bg {
+        transform: rotateY(180deg);
+        bottom: 0;
+        left: 0;
+        max-width: 734px;
+        z-index: -1;
+
+        @include breakpoint(tablet) {
+            max-width: 520px;
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 330px;
+        }
+
+        @include breakpoint(mobile-s) {
+            max-width: 319px;
+        }
+    }
+
+    .hero_wrapper {
+        margin-top: $blackHedearHeight;
+    }
+
+    .hero_content {
+        margin-left: auto;
+        max-width: 570px;
+        padding-bottom: 60px;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 438px;
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: 40px;
+            padding-bottom: 312px;
+        }
+
+        h1 {
+            font-size: 57px;
+            line-height: 66px;
+
+            @include breakpoint(mobile) {
+                font-size: 40px;
+                line-height: 46px;
+            }
+
+            @include breakpoint(mobile-s) {
+                line-height: 38px;
+            }
+        }
+
+        p {
+            @include breakpoint(mobile) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .ready_btn {
+        margin-top: 93px;
+
+        @include breakpoint(tablet) {
+            margin-top: 63px;
+        }
+        @include breakpoint(mobile) {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 260px;
+        }
+
+        .btn {
+            @include breakpoint(mobile) {
+                font-size: 13px;
+            }
+        }
+    }
+}

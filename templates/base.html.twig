@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Brave Together -
+			{% block title %}{% endblock %}
+		</title>
+
+		{% if app.request.server.get('HTTP_HOST') == 'bravetogether.maybelline.fr' %}
+			<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-MHFQ7NM');</script>
+			<!-- End Google Tag Manager -->
+		{% endif %}
+
+		<!-- Browser and shortcut icons -->
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/maybelline_favicon.png') }}">
+
+		{{ encore_entry_link_tags('app') }}
+		{% block stylesheets %}{% endblock %}
+	</head>
+
+	<body>
+		{% if app.request.server.get('HTTP_HOST') == 'bravetogether.maybelline.fr' %}
+			<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHFQ7NM"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
+		{% endif %}
+
+		{% if 'blog' in app.request.get('_route') or 'home' == app.request.get('_route') %}
+			{% include 'partials/layouts/_navbar.html.twig' %}
+		{% else %}
+			{% include 'partials/layouts/_game_black_heder.html.twig' with {'field': page_title }%}
+		{% endif %}
+
+		{% block body %}{% endblock %}
+
+		{% if 'blog' in app.request.get('_route') or 'home' == app.request.get('_route') %}
+			{% include 'partials/layouts/_footer.html.twig' %}
+		{% endif %}
+
+		{% if app.request.server.get('HTTP_HOST') == 'bravetogether.maybelline.fr' %}
+			<!-- OneTrust Cookies Consent Notice start for maybelline.fr -->
+			<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="6ee4327f-ba00-4f9a-834c-8457f01ebfc1" ></script>
+			<script type="text/javascript">
+			function OptanonWrapper() { }
+			</script>
+			<!-- OneTrust Cookies Consent Notice end for maybelline.fr -->
+		{% else %}
+			<!-- OneTrust Cookies Consent Notice start for maybelline.fr -->
+			<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="6ee4327f-ba00-4f9a-834c-8457f01ebfc1-test" ></script>
+			<script type="text/javascript">
+			function OptanonWrapper() { }
+			</script>
+			<!-- OneTrust Cookies Consent Notice end for maybelline.fr -->
+		{% endif %}
+		
+		{{ encore_entry_script_tags('app') }}
+		{{ encore_entry_script_tags('main') }}
+		{% block javascripts %}{% endblock %}
+	</body>
+</html>

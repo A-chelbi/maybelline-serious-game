@@ -1,0 +1,238 @@
+/*------------------------------------------------------------------
+[Blog __Hero] 
+*/
+.blog {
+    position: relative;
+
+    .sticky_share_menu:first-child {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .article_hero {
+        @include breakpoint(mobile) {
+            padding-top: 168px;
+        }
+    }
+}
+
+.blog_hero {
+    position: relative;
+    color: #000;
+
+    .btn_scroll_down {
+        background-color: #000;
+        bottom: 24px;
+
+        @include breakpoint(tablet) {
+            bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            bottom: 50px;
+        }
+
+        @include breakpoint(mobile-s) {
+            bottom: 138px;
+        }
+
+        &::after {
+            border-color: #fff;
+        }
+
+        &::before {
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .hero_content {
+        padding-bottom: 207px;
+
+        @include breakpoint(desktop) {
+            padding-left: 10px;
+        }
+
+        @include breakpoint(tablet) {
+            padding-bottom: 366px;
+            padding-left: 0;
+        }
+
+        @include breakpoint(mobile) {
+            padding-bottom: 330px;
+            padding-top: 182px;
+        }
+
+        p {
+            font-size: 32px;
+            line-height: 37px;
+            max-width: 594px;
+            margin-top: 29px;
+
+            @include breakpoint(desktop) {
+                max-width: 500px;
+            }
+
+            @include breakpoint(tablet) {
+                max-width: 594px;
+            }
+
+            @include breakpoint(mobile) {
+                font-size: 16px;
+                line-height: 18px;
+                margin-top: 21px;
+            }
+        }
+    }
+
+    .start_game_hero {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .bottom_right {
+        bottom: -112px;
+        transition: ease-in-out 0.3s;
+
+        @include breakpoint(desktop) {
+            width: 54vw;
+        }
+
+        @include breakpoint(tablet) {
+            bottom: -25px;
+            width: auto;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 316px;
+        }
+    }
+}
+
+.game_info {
+    min-height: 776px;
+
+    @include breakpoint(mobile) {
+        min-height: 733px;
+    }
+
+    .blog_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-basis: 40%;
+        padding: 164px 30px;
+        gap: 10vw;
+
+        @include breakpoint(desktop) {
+            gap: 4vw;
+        }
+
+        @include breakpoint(tablet) {
+            flex-wrap: wrap-reverse;
+            gap: 0;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 100px 18px;
+        }
+
+        img {
+            @include breakpoint(tablet) {
+                max-width: 356px;
+            }
+
+            @include breakpoint(mobile) {
+                max-width: 256px;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        clip-path: polygon(0 0, 100% 9%, 100% 88%, 0% 100%);
+
+        @include breakpoint(tablet) {
+            margin-top: -93px;
+        }
+
+        @include breakpoint(mobile) {
+            clip-path: polygon(0 0, 100% 4%, 100% 90%, 0% 100%);
+            margin-top: -52px;
+        }
+
+        .blog_wrapper {
+            padding: 43px 30px;
+
+            @include breakpoint(tablet) {
+                padding: 164px 30px;
+            }
+
+            @include breakpoint(mobile) {
+                padding: 100px 18px;
+            }
+        }
+    }
+
+    &:nth-child(4) {
+        clip-path: polygon(0 10%, 100% 0, 100% 83%, 0% 74%);
+        margin-top: -143px;
+        min-height: 805px;
+        padding-bottom: 151px;
+
+        @include breakpoint(tablet) {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+            margin-top: -165px;
+            padding-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            clip-path: polygon(0 6%, 100% 0, 100% 97%, 0% 90%);
+        }
+
+        .blog_wrapper {
+            flex-wrap: wrap;
+        }
+    }
+
+    &:nth-child(5) {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+        margin-top: -245px;
+
+        @include breakpoint(tablet) {
+            margin-top: -145px;
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: -150px;
+            clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    .game_info_content {
+        max-width: 574px;
+    }
+
+    .game_info_img {
+        @include breakpoint(mobile) {
+            margin-left: auto;
+            margin-right: -18px;
+        }
+    }
+
+    p {
+        margin: 30px 0 69px;
+    }
+
+    &.colored_bg {
+        background: -webkit-linear-gradient(114deg, $green 43%, rgba(0, 0, 0, 0) 30%),
+            -webkit-linear-gradient(47deg, $pink 61%, $orange 51%) !important;
+        background: -o-linear-gradient(114deg, $green 43%, rgba(0, 0, 0, 0) 30%),
+            -o-linear-gradient(47deg, $pink 61%, $orange 51%) !important;
+        background: -moz-linear-gradient(114deg, $green 43%, rgba(0, 0, 0, 0) 30%),
+            -moz-linear-gradient(47deg, $pink 61%, $orange 51%) !important;
+        background: linear-gradient(114deg, $green 43%, rgba(0, 0, 0, 0) 30%),
+            linear-gradient(47deg, $pink 61%, $orange 51%) !important;
+    }
+}

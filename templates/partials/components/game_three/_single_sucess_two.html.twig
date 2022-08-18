@@ -1,0 +1,21 @@
+<section class="single_success_section container">
+	<h1 class="title">{{ 'S’informer'|trans }}</h1>
+	<h1 class="subtitle">{{ 'Des sites et des applis pour en apprendre plus.'|trans }}</h1>
+
+	<div class="image_wrapper image_one">
+		<img src="{{ asset('assets/img/game3_pool_1.png') }}" alt="ligne d’écoute">
+	</div>
+	
+	<div class="single_success_description">
+		<p>{{ 'Ils ont comme objectif d’aider les personnes à identifier leur mal être pour mieux le
+comprendre.'|trans }}</p>
+		<p>{{ 'Ils peuvent être une première étape de prise de conscience de ses difficultés grâce aux
+contenus qu’ils proposent : activités, exercices, vidéos éducatives, cartes interactives
+pour trouver des professionnels près de chez soi…'|trans }}</p>
+	</div>
+
+	<div class="buttons_groupe">
+		<a href="{{ path('game_three_article') }}/#sinformer" class="btn btn_bg_colored" target="_blanc">{{ 'Brave together vous recommande'|trans }}</a>
+		<a href="{{ path('game_three_game') }}" class="btn btn_pink single_sucess_btn">{{ 'CONTINUER'|trans }}</a>
+	</div>
+</section>

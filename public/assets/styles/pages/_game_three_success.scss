@@ -1,0 +1,117 @@
+.game3_success {
+    .hero_wrapper {
+        margin-top: 83px;
+
+        @include breakpoint(tablet) {
+            min-height: 94vh;
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: calc(1vh + #{$blackHedearHeight});
+        }
+    }
+    .hero_content {
+        text-align: center;
+        margin-right: auto;
+        padding-top: 45px;
+        padding-bottom: 59px;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 357px;
+        }
+
+        @include breakpoint(mobile) {
+            padding-bottom: 189%;
+            padding-top: 0;
+        }
+    }
+
+    .logo_group {
+        max-width: 238px;
+        margin: auto;
+        margin-bottom: 32px;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 238px;
+
+            @include breakpoint(mobile) {
+                max-width: 180px;
+            }
+
+            @include breakpoint(mobile-s) {
+                max-width: 150px;
+            }
+        }
+    }
+
+    .pink {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .sticky_share_menu {
+        position: static;
+        max-width: 300px;
+        margin: 93px auto 0;
+
+        @include breakpoint(mobile) {
+            margin: 50px auto 0;
+        }
+
+        h5 {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 300px;
+        }
+
+        li {
+            margin-bottom: 0;
+        }
+    }
+    .ready_btn {
+        @include breakpoint(mobile) {
+            width: 189px;
+            bottom: 442px;
+        }
+
+        @include breakpoint(mobile-s) {
+            bottom: 390px;
+        }
+
+        .btn {
+            margin: 0 15px;
+
+            @include breakpoint(mobile) {
+                margin: 0;
+            }
+        }
+
+        a:nth-child(2) {
+            @include breakpoint(mobile) {
+                display: none;
+            }
+        }
+    }
+
+    h1 {
+        @include breakpoint(mobile-s) {
+            font-size: 33px !important;
+        }
+    }
+
+    p {
+        @include breakpoint(mobile-s) {
+            margin-top: 10px !important;
+            font-size: 15px !important;
+            line-height: 24px !important;
+        }
+    }
+}

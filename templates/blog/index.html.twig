@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Blog'|trans }}{% endblock %}
+
+{% block body %}
+<section class="blog_hero">
+    <div class="hero_wrapper">
+        <div class="container">
+            <div class="hero_content">
+                <h1>{{ "S'informer"|trans }}</h1>
+                <p>{{ "Apprenez-en plus au travers de trois articles dédiés pour repérer les signes, choisir les mots et trouver de l’aide."|trans }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="start_game_hero">
+        {% include 'partials/components/_start_game_btn.htm.twig' with {'valueBtnNavBar': valueBtnNavBar, 'linkBtnNavBar': linkBtnNavBar} only %}
+    </div>
+    <button class="btn_scroll_down" id="btn_scroll_down"> </button>
+    <img class="bottom_right" src="{{ asset('assets/img/bg_sinformer.png') }}" alt="ENSEMBLE CONTRE L’anxiété et la dépression">
+</section>
+
+<section class="game_info colored_bg">
+    <div class="blog_wrapper">
+        <div class="game_info_img">
+            <img src="{{ asset('assets/img/bg_home_talkAoutIt_large.png') }}" alt="DEFINITIONS">
+        </div>
+        <div class="game_info_content">
+            <h1>{{ "CONSTAT"|trans }}</h1>
+            <p>{{ "Ces dernières années, l’état psychique des jeunes français se dégrade et la crise sanitaire est venue amplifier une situation déjà préoccupante chez les 18-24 ans."|trans }} </p>
+            <a href="{{ path('blog_general') }}" class="btn btn_green">{{ "Lire"|trans }}</a>
+        </div>
+    </div>
+</section>
+
+<section class="game_info green_bg">
+    <div class="blog_wrapper">
+        <div class="game_info_content">
+            <h1>{{ "Repérer les signes"|trans }}</h1>
+            <p>{{ "Découvrez comment repérer les principaux signes de troubles anxieux et dépressifs."|trans }} </p>
+            <a href="{{ path('blog_one') }}" class="btn btn_green">{{ "Lire"|trans }}</a>
+        </div>
+        <div class="game_info_img">
+            <img src="{{ asset('assets/img/game1.png') }}" alt="Repérer les signes">
+        </div>
+    </div>
+</section>
+
+<section class="game_info orange_bg">
+    <div class="blog_wrapper">
+        <div class="game_info_img">
+            <img class="" src="{{ asset('assets/img/game2.png') }}" alt="Savoir où trouver de l’aide">
+        </div>
+        <div class="game_info_content">
+            <h1>{{ 'Choisir les mots'|trans }}</h1>
+            <p>{{ 'Apprenez à choisir les mots pour avoir une conversation Brave Together'|trans }} </p>
+            <a href="{{ path('blog_two') }}" class="btn btn_orange">{{ "Lire"|trans }}</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

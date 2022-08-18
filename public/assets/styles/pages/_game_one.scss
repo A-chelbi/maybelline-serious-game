@@ -1,0 +1,221 @@
+.game_one {
+    min-height: 100vh;
+    padding: $blackHedearHeight 95px 30px;
+
+    @include breakpoint(tablet) {
+        padding: 95px 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding: $blackHedearHeight 0 1px;
+    }
+
+    #block-images {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1240px;
+        margin: auto;
+        padding: 0 10px;
+
+        @include breakpoint(tablet) {
+            max-width: 815px;
+            padding: 0;
+        }
+
+        @include breakpoint(mobile) {
+            justify-content: space-between;
+            max-width: 1100px;
+        }
+
+        @include breakpoint(mobile-s) {
+            padding: 0 20px
+        }
+    }
+
+    .block-image {
+        position: relative;
+        width: 377px;
+        height: 535px;
+
+        @include breakpoint(mobile) {
+            height: 481px;
+            width: 310px;
+        }
+
+        @include breakpoint(mobile-s) {
+            height: 314px;
+            width: 249px;
+        }
+    }
+
+    .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .image-with-error-parts {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 44px;
+        text-align: center;
+        margin: 12px auto 20px;
+        font-weight: normal;
+
+        @include breakpoint(tablet) {
+            margin: 71px auto;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 14px;
+            line-height: 17px;
+            margin: 6px auto;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    h5 {
+        font-size: 26px;
+        line-height: 31px;
+        text-align: center;
+        margin: 30px auto 20px;
+        font-weight: normal;
+
+        @include breakpoint(tablet) {
+            margin: 71px auto;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 16px;
+            line-height: 19px;
+            margin: 26px auto;
+        }
+    }
+
+    .swiper-container {
+        max-width: 800px;
+        padding: 0;
+
+        @include breakpoint(mobile) {
+            padding: 0 0 68px;
+        }
+
+        @include breakpoint(mobile-s) {
+            padding: 0 0 48px;
+        }
+    }
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 19px;
+            height: 19px;
+            border: 1px solid #ffffff;
+            opacity: 1;
+            background: transparent;
+        }
+
+        .swiper-pagination-bullet-active {
+            position: relative;
+
+            &::after {
+                content: "";
+                background: #fff;
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                transform-origin: center;
+                top: 2px;
+                left: 2px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.image_rideau {
+    width: 257px;
+    height: 370px;
+    left: 10px;
+
+    @include breakpoint(mobile) {
+        width: 237px;
+        height: 350px;
+    }
+}
+
+.image_iphone {
+    width: 32px;
+    height: 30px;
+    top: 55%;
+    left: 69%;
+
+    @include breakpoint(mobile) {
+        width: 22px;
+        height: 20px;
+        top: 60%;
+        left: 68%;
+    }
+}
+
+.image_plante {
+    width: 99px;
+    height: 92px;
+    right: 3%;
+    top: 14%;
+
+    @include breakpoint(mobile) {
+        width: 89px;
+        height: 82px;
+        right: 11%;
+    }
+}
+
+.image_bierre {
+    width: 35px;
+    height: 79px;
+    bottom: 29%;
+    left: 12%;
+
+    @include breakpoint(mobile) {
+        width: 25px;
+        height: 69px;
+    }
+}
+
+.image_margot {
+    width: 260px;
+    height: 386px;
+    top: 28%;
+    left: 26%;
+    // pointer-events: none;
+
+    @include breakpoint(mobile) {
+        width: 240px;
+        height: 366px;
+        top: 33%;
+        left: 29%;
+    }
+}
+
+#image-with-errors {
+    pointer-events: none;
+}
+
+area {
+    cursor: pointer;
+}
+
+.found_element {
+    -webkit-filter: brightness(1.6) contrast(37%); /* Safari 6.0 - 9.0 */
+    filter: brightness(1.6) contrast(37%);
+    opacity: 0.9;
+}

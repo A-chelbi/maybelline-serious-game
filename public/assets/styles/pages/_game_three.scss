@@ -1,0 +1,357 @@
+/*------------------------------------------------------------------
+[Game 3 __Intro] 
+*/
+.game_three_intro {
+    .bottom_left_bg {
+        bottom: 0;
+        left: 0;
+        max-width: 682px;
+
+        @include breakpoint(desktop) {
+            left: -53px;
+            max-width: 609px;
+        }
+
+        @include breakpoint(tablet) {
+            max-width: 462px;
+            z-index: 1;
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 262px;
+            left: 104px;
+        }
+    }
+
+    &.single_game_intro {
+        padding-top: 195px;
+
+        @include breakpoint(tablet) {
+            padding-top: 239px;
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: $blackHedearHeight;
+        }
+    }
+
+    .game_one_hero{
+        @include breakpoint(mobile-s) {
+            padding-bottom: 316px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[Game 3 __Photo pool] 
+*/
+.photo_pool {
+    min-height: 100vh;
+    padding-top: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(mobile-s) {
+        padding-top: 100px;
+    }
+
+    h5 {
+        font-size: 26px;
+        line-height: 31px;
+        font-weight: normal;
+
+        @include breakpoint(mobile) {
+            font-size: 16px;
+            line-height: 19px;
+            margin: auto 10px;
+        }
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 35px auto;
+        font-weight: normal;
+
+        @include breakpoint(mobile) {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 20px 10px;
+        }
+    }
+}
+
+.photo_pool__wrapper {
+    position: relative;
+    min-height: 700px;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        min-height: 60vh;
+    }
+
+    @include breakpoint(mobile-s) {
+        min-height: 68vh;
+    }
+}
+
+.photo_pool__image {
+    position: absolute;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        transform: scale(0.7);
+    }
+
+    &:nth-child(1) {
+        left: 35vw;
+        top: 37px;
+
+        @include breakpoint(tablet) {
+            left: 21vw;
+        }
+
+        @include breakpoint(mobile) {
+            left: 1vw;
+            top: -10px;
+        }
+    }
+
+    &:nth-child(2) {
+        left: 46vw;
+        top: 202px;
+
+        @include breakpoint(tablet) {
+            left: 62vw;
+        }
+
+        @include breakpoint(mobile) {
+            left: 41vw;
+            top: 229px;
+        }
+    }
+
+    &:nth-child(3) {
+        left: 54vw;
+        top: 256px;
+
+        @include breakpoint(tablet) {
+            left: 8vw;
+        }
+
+        @include breakpoint(mobile) {
+            top: 254px;
+            left: 0;
+        }
+    }
+
+    &:nth-child(4) {
+        left: 55vw;
+        top: 144px;
+
+        @include breakpoint(tablet) {
+            left: 45vw;
+            top: 90px;
+        }
+
+        @include breakpoint(mobile) {
+            left: 23vw;
+            top: 151px;
+        }
+    }
+
+    &:nth-child(5) {
+        left: 35vw;
+        top: 160px;
+
+        @include breakpoint(mobile) {
+            left: 55vw;
+            top: -10px;
+        }
+    }
+
+    &:nth-child(6) {
+        left: 46vw;
+        top: 297px;
+
+        @include breakpoint(tablet) {
+            left: 41vw;
+            top: 340px;
+        }
+
+        @include breakpoint(mobile) {
+            top: 122px;
+            left: 12vw;
+        }
+    }
+
+    &:nth-child(7) {
+        left: 41vw;
+        top: 273px;
+    }
+
+    &:nth-child(8) {
+        left: 44vw;
+        top: 100px;
+
+        @include breakpoint(tablet) {
+            left: 39vw;
+        }
+
+        @include breakpoint(mobile) {
+            top: 159px;
+        }
+    }
+}
+
+.selected_part {
+    // border: 5px solid #4cd964;
+    z-index: 2;
+    transform: scale(1.2);
+
+    @include breakpoint(mobile) {
+        transform: scale(0.8);
+    }
+}
+
+.wrong {
+    // border: 5px solid $orange !important;
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+
+    @include breakpoint(mobile) {
+        transform: scale(0.7);
+    }
+}
+
+.correct {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.single_success {
+    [data-image] {
+        display: none;
+    }
+}
+
+.single_success_section {
+    text-align: center;
+    padding-top: 186px;
+    padding-bottom: 80px;
+
+    @include breakpoint(mobile) {
+        padding-top: 122px;
+    }
+
+    h1 {
+        max-width: 574px;
+        margin-right: auto;
+        margin-left: auto;
+
+        &.title {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 20px;
+
+            @include breakpoint(mobile) {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &.subtitle {
+            font-size: 33px;
+            line-height: 43px;
+            text-transform: none;
+            margin-bottom: 100px;
+
+            @include breakpoint(mobile) {
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .single_success_description {
+        margin: 82px auto;
+        max-width: 570px;
+
+        @include breakpoint(mobile) {
+            margin: 42px auto;
+            text-align: left;
+        }
+    }
+
+    img {
+        @include breakpoint(mobile) {
+            max-width: 300px;
+        }
+    }
+
+    .btn {
+        @include breakpoint(mobile) {
+            font-size: 12px;
+        }
+    }
+
+    .image_wrapper {
+        width: 370.4px;
+        height: 479px;
+
+        display: grid;
+        place-items: center;
+        margin: auto;
+
+        img {
+            width: 300px;
+
+            @include breakpoint(mobile) {
+                width: 200px;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            width: 250px;
+            height: 300px;
+        }
+
+        &.image_one {
+            background: #ffdee8;
+        }
+
+        &.image_two {
+            background: #f9eeda;
+        }
+        &.image_three {
+            background: #daefed;
+        }
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

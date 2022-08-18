@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'Accueil'|trans }}
+{% endblock %}
+
+{% block body %}
+<section class="hero">
+	<div class="hero_wrapper">
+		<div class="container">
+			<div class="hero_content">
+				<h1>{{ 'ENSEMBLE CONTRE L’anxiété et la dépression'|trans }}</h1>
+				<p>{{ 'On a tous un rôle à jouer pour prendre soin de ceux qui nous entourent.'|trans }}</p>
+			</div>
+		</div>
+		<div class="bottom_left"></div>
+	</div>
+	<div class="start_game_hero">
+		{% include 'partials/components/_start_game_btn.htm.twig' with {'valueBtnNavBar': valueBtnNavBar, 'linkBtnNavBar': linkBtnNavBar} only %}
+	</div>
+	<a href="#games" class="btn_scroll_down" id="btn_scroll_down"></a>
+	<img class="bottom_right" src="{{ asset('assets/img/bg_home_hero.png') }}" alt="ENSEMBLE CONTRE L’anxiété et la dépression">
+
+</section>
+
+<section id="games" class="games container">
+	<div class="game_item">
+		<h3 class="game_name">{{ 'repérer les signes'|trans }}</h3>
+		<img src="{{ asset('assets/img/game1.png') }}" alt="game 1">
+		<a href="{{ path('game_one_intro') }}" class="btn btn_bg_green game_start_btn">{{ valueBtnGame1 }}</a>
+	</div>
+
+	<div class="game_item">
+		<h3 class="game_name">{{' Choisir les mots'|trans }}</h3>
+		<img src="{{ asset('assets/img/game2.png') }}" alt="game 2">
+		<a href="{{ path('game_two_intro') }}" class="btn btn_bg_orange game_start_btn {% if valueBtnGame2 == 'Commencer'|trans and not introGame2 %}disabeled{% endif %}">{{ valueBtnGame2 }}</a>
+	</div>
+
+	<div class="game_item">
+		<h3 class="game_name">{{ 'trouver de l’aide'|trans }}</h3>
+		<img src="{{ asset('assets/img/game3.png') }}" alt="game 3">
+		<a href="{{ path('game_three_intro') }}"  class="btn btn_bg_pink game_start_btn {% if valueBtnGame3 == 'Commencer'|trans and not introGame3 %}disabeled{% endif %}">{{ valueBtnGame3 }}</a>
+	</div>
+
+</section>
+
+<section class="about">
+	<div class="about_wrapper">
+		<div class="container">
+			<div class="about_content">
+				<h1>{{ 'À propos de Brave Together'|trans }}</h1>
+				<p>{{ 'Maybelline New York & L’UNAFAM s’unissent ensemble contre l’anxiété et la dépression chez les jeunes pour lancer l’initiative Brave Together, un programme de sensibilisation et de formation permettant à chacun de réperer les signes, choisir les mots, trouver de l’aide.'|trans }}</p>
+					<div class="about_btn">
+						<a href="https://www.maybelline.fr/bravetogether" class="btn btn_green">{{ 'En savoir plus '|trans }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<img class="bottom_right" src="{{ asset('assets/img/bg_home_about.png') }}" alt="À propos de Brave TogethEr">
+	</section>
+
+	<section class="talk_aout_it">
+		<img class="bottom_left_bg" src="{{ asset('assets/img/bg_home_talkAoutIt.png') }}" alt="Aidez-nous à en parler">
+		
+		<div class="talk_aout_it__info">
+			<div>
+				<h1>{{ "Partage l'expérience à ton entourage"|trans }}</h1>
+				<p>{{'Rejoins le mouvement Brave Together et formons ensemble la première chaîne d’entraide contre l’anxiété et la dépression chez les jeunes.'|trans }}</p>
+				<p>{{'Nous avons tous un rôle à jouer pour prendre soin de ceux qui nous entourent !'|trans }}</p>
+				<p>{{'Partageons le programme sur les réseaux sociaux.'|trans }}</p>
+			</div>
+			{% include 'partials/components/_social_media_links.html.twig' %}
+		</div>
+	</section>
+
+{% endblock %}
+

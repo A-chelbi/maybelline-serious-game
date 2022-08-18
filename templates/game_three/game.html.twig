@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '3 · Trouver de l’aide'|trans }}
+{% endblock %}
+{% set page_title = '3 · Trouver de l’aide'|trans %}
+{% set game_title = 'Trouver de l’aide'|trans %}
+
+{% block body %}
+	<section class="photo_pool pink_bg">
+		<h5>{{ 'Clique sur 2 images pour trouver les paires'|trans }}</h5>
+		
+		<div class="photo_pool__wrapper">
+			<img class="photo_pool__image hidden_content" data-image="two" src="{{ asset('assets/img/game3_pool_1-1.png') }}" alt="Trouver de l’aide">
+			<img class="photo_pool__image hidden_content" data-image="one" src="{{ asset('assets/img/game3_pool_2-1.png') }}" alt="Trouver de l’aide">
+			<img class="photo_pool__image hidden_content" data-image="three" src="{{ asset('assets/img/game3_pool_3-1.png') }}" alt="Trouver de l’aide">
+			<img class="photo_pool__image hidden_content" data-image="two" src="{{ asset('assets/img/game3_pool_1-2.png') }}" alt="Trouver de l’aide">
+			<img class="photo_pool__image hidden_content" data-image="three" src="{{ asset('assets/img/game3_pool_3-2.png') }}" alt="Trouver de l’aide">
+			<img class="photo_pool__image hidden_content" data-image="one" src="{{ asset('assets/img/game3_pool_2-2.png') }}" alt="Trouver de l’aide">
+		</div>
+		
+		<h2>
+			<span id="found_image"></span>
+			{{ ' aide(s) trouvé(s) sur 3'|trans }}
+		</h2>
+	</section>
+
+{% endblock %}

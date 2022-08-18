@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'INTRODUCTION'|trans }}
+{% endblock %}
+{% set page_title = 'INTRODUCTION'|trans %}
+{% block body %}
+	<section class="hero general_intro">
+		<div class="hero_wrapper">
+			<div class="container">
+				<div class="hero_content">
+					<h1>{{ 'ENSEMBLE CONTRE L’anxiété et la dépression'|trans }}</h1>
+					<p>{{ "Commence l'expérience Brave Together et apprends grâce à 3 mini-jeux à repérer les signes, choisir les mots et trouver de l'aide pour savoir réagir face à l'anxiété et la dépression. "|trans }}</p>
+
+					<div class="ready_btn">
+						<a href="{{ path('game_one_intro') }}" class="btn btn_green">
+							{{ 'Commencer'|trans }}
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<img class="bottom_left_bg" src="{{ asset('assets/img/bg_home_hero.png') }}" alt="ENSEMBLE CONTRE L’anxiété et la dépression">
+
+	</section>
+{% endblock %}

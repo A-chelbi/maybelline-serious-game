@@ -1,0 +1,38 @@
+before_script:
+  - cd ~
+  - echo "$SSH_PRIVATE_KEY" > "ssh_private_key"
+  - chmod 400 ssh_private_key
+
+deploy_develop:
+  stage: deploy
+  environment:
+    name: develop
+    url: maybelline-serious-game.dev.aleia.io
+  script:
+    - ssh -o StrictHostKeyChecking=no -i ssh_private_key www-data@maybelline-serious-game.dev.aleia.io ". .nvm/nvm.sh && cd vhosts/maybelline-serious-game.dev.aleia.io && git reset --hard HEAD && git pull origin develop && composer install && php bin/console doctrine:migrations:migrate && yarn install && yarn dev && exit"
+  only:
+    - develop
+
+deploy_test:
+  stage: deploy
+  environment:
+    name: test
+    url: maybelline-serious-game.test.aleia.io
+  script:
+    - ssh -o StrictHostKeyChecking=no -i ssh_private_key www-data@maybelline-serious-game.test.aleia.io ". .nvm/nvm.sh && cd vhosts/maybelline-serious-game.test.aleia.io && git reset --hard HEAD && git pull origin test && composer install && php bin/console doctrine:migrations:migrate && yarn install && yarn dev && exit"
+  only:
+    - test
+
+deploy_prod:
+  stage: deploy
+  environment:
+    name: prod
+    url: bravetogether.maybelline.fr
+  before_script:
+    - cd ~
+    - echo "$SSH_PRIVATE_KEY_PROD" > "ssh_private_key"
+    - chmod 400 ssh_private_key
+  script:
+    - ssh -o StrictHostKeyChecking=no -i ssh_private_key www-data@51.210.97.254 "cd bravetogether.maybelline.fr && git reset --hard HEAD && git pull origin master && composer install && php bin/console doctrine:migrations:migrate && yarn install && yarn dev && exit"
+  only:
+    - master

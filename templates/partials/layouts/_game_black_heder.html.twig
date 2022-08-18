@@ -1,0 +1,22 @@
+<div class="black_header">
+	<a href="{{ path('home') }}" class="back_arrow_link">
+		<div class="back_arrow"></div>
+	</a>
+	<div class="title">
+		{{ 'BRAVE TOGETHER / '|trans }}
+		<div class="bold_title">{{ field }}</div>
+	</div>
+
+	{% if 'game_one_article' == app.request.get('_route') %}
+		<a href="{{ path('game_two_game') }}" class="btn btn_black">{{ 'CONTINUER VERS JEU 2'|trans }}</a>
+		<a href="{{ path('game_two_game') }}" class="next_arrow_link" ><div class="next_arrow"></div></a>
+
+	{% elseif  'game_two_article' == app.request.get('_route') %}
+		<a href="{{ path('game_three_game') }}" class="btn btn_black">{{ 'CONTINUER VERS JEU 3'|trans }}</a>
+		<a href="{{ path('game_three_game') }}" class="next_arrow_link" ><div class="next_arrow"></div></a>
+
+	{% elseif  'game_three_single_success' in app.request.get('_route') %}
+		<a href="{{ path('game_three_game') }}" id="single_sucess_btn" class="btn btn_black single_sucess_btn">{{ 'CONTINUER'|trans }}</a>
+		<a href="{{ path('game_three_game') }}" class="next_arrow_link single_sucess_btn" ><div class="next_arrow"></div></a>
+	{% endif %}
+</div>

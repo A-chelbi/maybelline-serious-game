@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'GAME 2'|trans }}
+{% endblock %}
+{% set page_title = '2 · Choisir LES MOTS.'|trans %}
+
+{% block body %}
+	<article id="game_one_article"> 
+
+		{# {% include 'partials/components/_sticky_menu_share.html.twig' %} #}
+
+		<section class="article_game">
+			<div class="article_hero">
+				<h3 class="article_hero_title">{{ 'Choisir les mots'|trans }}</h3>
+				<br><br>
+				<img src="{{ asset('assets/img/game2.png') }}" alt="Game 1 article hero">
+				{% include 'partials/components/_sticky_menu_share.html.twig' %}
+			</div>
+
+			<div class="article_grid">
+				<div class="article_grid_gallery"></div>
+
+				<div class="article_grid_info">
+					<h5>{{ 'Prendre la décision d’aider une personne souffrant de dépression ou d’un trouble anxieux peut sembler difficile au premier abord pour plein de raisons : manque de temps et de disponibilités, ne pas savoir comment s’y prendre, avoir peur de mal faire, ne pas être soi-même assez bien pour être dans une relation d’aide.'|trans }}</h5>
+				</div>
+			</div>
+		</section>
+
+		<section class="article_content">
+
+			<div class="article_grid_info">
+				<h3 class="article_title_longe_word">{{ 'Les recommandations Brave Together'|trans }}</h3>
+				<p class="subtitle">
+					<b>{{ 'Oser en parler'|trans }}
+					</b>
+				</p>
+				<p>{{ 'Si tu décides d’aider une personne pour laquelle tu as repéré des signes de mal être qui t’inquiètent, parles-en franchement et sincèrement. Manifester son intérêt pour elle et son inquiétude sont importants, car en exprimant ce que tu ressens, cela incitera la personne à exprimer aussi ce qu’elle ressent.'|trans }}</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Instaurer un climat de confiance'|trans }}
+					</b>
+				</p>
+				<p>{{ 'Cela permettra d\'évoquer ces difficultés dans un moment où vous êtes disponibles et ne risquez pas d’être dérangés, où une parole confidentielle pourra s’exprimer (émotions, ressentis...). La rencontre, la présence à l’autre peut être en soi réconfortante, n’hésite pas à la proposer dans un lieu où vous vous sentez bien tous les deux.'|trans }}</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Etre à l’écoute'|trans }}
+					</b>
+				</p>
+				<p>
+					{{ 'C’est être disponible pour l’autre Accepte ce que dit la personne sans la contredire ou porter de jugements sur ses propos, même s’ils ne te paraissent pas être dans la réalité. Accepte les silences, laisse le temps à la personne de s’exprimer. Cela peut être difficile pour elle.'|trans }}
+				</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Rappeler que vous êtes là pour l’autre'|trans }}
+					</b>
+				</p>
+				<p>
+					{{ 'Reste confiant dans le fait que la personne pourra aller mieux. Garantis le lien et la relation en étant celui qui rappelle ou qui prend contact. La personne aura tendance à se replier sur elle-même et à ne pas vouloir déranger. Elle ne prendra pas l’initiative d’appeler mais ça lui fera du bien que tu le fasses.'|trans }}
+				</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Orienter vers de l’aide'|trans }}</b>
+				</p>
+				<p>
+					{{ 'Face aux difficultés et au mal être que va te raconter la personne, tu n’auras pas toutes les réponses. N’hésite pas à lui proposer de chercher ensemble les ressources les plus adaptées pour trouver l’aide dont elle a besoin (sites, applis, lignes d’écoute, rencontre avec un professionnel) et si elle est d’accord, de l’accompagner dans sa première démarche.'|trans }}
+				</p>
+			</div>
+
+			<div class="suicide_bloc article_grid_info">
+				<h3>{{ 'Idées noires et suicidaires'|trans }}</h3>
+				<p>{{ "Si dans une conversation, tu sens que la personne a des idées suicidaires, lui en parler ne l’incitera pas à passer à l’acte. Elle pourra même être soulagée d’avoir quelqu’un avec qui mettre des mots sur cette douleur."|trans }}</p>
+				<p>{{ "Si tu ne te sens pas d’aborder ce sujet seul, ne le fais pas. Mais tu ne peux pas laisser ça sans réponse. Demande de l’aide à quelqu’un d’autre, il ne faut pas laisser la personne seule. En cas d’urgence appelez le 15."|trans }}</p>
+				<p>{{ "Tu peux aussi prendre conseil auprès de Suicide Ecoute : "|trans }}</p>
+				<a class="phone_number" href="tel:+01 45 39 40 00">01 45 39 40 00</a>
+				<p>{{ "(ligne gratuite ouverte 7j/7j et 24h/24h)."|trans }}</p>
+			</div>
+
+			<div class="article_grid_info">
+				<h2>{{ '3 bons conseils'|trans }}</h2> 
+				<p class="subtitle">
+					<b>{{ 'Ne pas faire à sa place'|trans }}</b>
+				</p>
+				<p>{{ 'Il peut être tentant de faire des démarches à la place de la personne avec de bonnes intentions, mais cela ne va pas l’aider à devenir acteur de son mieux être. Laisse-lui du temps. Il est important de bien comprendre qu’elle avancera à son rythme et avec ses possibilités. Lutter contre ses angoisses ou ses symptômes dépressifs lui demandent déjà beaucoup d’énergie.'|trans }}</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Encourage-la à persévérer'|trans }}</b>
+				</p>
+				<p>{{ 'Aider une personne qui va mal peut être difficile. Tu dois t’attendre à devoir régulièrement encourager la personne à persévérer. Ce n’est pas parce qu’elle ne fait pas ce qu’elle dit ou ce que tu lui proposes, qu’elle ne veut pas s’en sortir. Patience et empathie vont être des alliées précieuses.'|trans }}</p>
+				<br>
+				<p class="subtitle">
+					<b>{{ 'Prends soin de toi'|trans }}</b>
+				</p>
+				<p>{{ 'Aider, mais dans la mesure de ses possibilités, ne pas trop en faire et surtout ne pas s’oublier soi pour aider les autres. Tu dois être bien pour pouvoir continuer à soutenir l’autre.'|trans }}</p>
+				<br><br><br>
+			</div>
+		</section>
+		<section class="next_game_section pink">
+			<div class="next_game">
+				<div>
+					<img src="{{ asset('assets/img/game3_intro.png') }}" alt="TROUVER DE L’AIDE.">
+				</div>
+
+				<div>
+					<h4>{{ 'ATELIER suivant'|trans }}</h4>
+					<h2>{{ 'TROUVER DE L’AIDE'|trans }}</h2>
+					<a href="{{ path('game_three_game') }}" class="btn btn_bg_pink">{{ 'Je suis prêt'|trans }}</a>
+				</div>
+			</div>
+
+			<div class="next_game_footer">
+				<p>{{ 'Rejoignez le mouvement Brave Together et aidez-nous à former un maximum de personnes à réagir face l’anxiété'|trans }}</p>
+				<br>
+				<p>{{ 'Nous faisons toutes et tous partie de la solution !'|trans }}</p>
+				<p>{{ 'Partagez le programme Brave Together sur les réseaux sociaux :'|trans }}</p>
+
+				{% include 'partials/components/_social_media_links.html.twig' %}
+			</div>
+		</section>
+	</article>
+{% endblock %}

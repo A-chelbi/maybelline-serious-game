@@ -1,0 +1,38 @@
+<div class="swiper-container__wrapper">
+	<!-- Slider main container -->
+	<div id="swiper-container" class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<div class="slide">
+					<img src="{{ asset('assets/img/slider1.png') }}" alt="Photo">
+				</div>
+				<p>
+					{{ 'changement de l’humeur (notamment une tristesse et des pleurs sans motif)'|trans }}
+				</p>
+			</div>
+			<div class="swiper-slide">
+				<div class="slide">
+					<img src="{{ asset('assets/img/slider2.png') }}" alt="Photo">
+				</div>
+				<p>{{ 'perte d’intérêt pour les activités qui font habituellement plaisir'|trans }}</p>
+			</div>
+			<div class="swiper-slide">
+				<div class="slide">
+					<img src="{{ asset('assets/img/slider3.png') }}" alt="Photo">
+				</div>
+				<p>{{ 'sensibilité exacerbée au bruit ou à l’agitation environnante '|trans }}</p>
+			</div>
+		</div>
+		<!-- If we need pagination -->
+		{# <div class="swiper-pagination"></div> #}
+
+
+		<!-- If we need scrollbar -->
+		{# <div class="swiper-scrollbar"></div> #}
+	</div>
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>

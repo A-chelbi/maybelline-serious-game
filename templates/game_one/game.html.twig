@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '1 · Repérer les signes'|trans }}
+{% endblock %}
+{% set page_title = '1 · Repérer les signes'|trans %}
+{% set game_title = 'Vous avez répéré un signe'|trans %}
+
+{% block body %}
+	<section class="green_bg game_one">
+		<h5>{{ "Clique sur les différences que tu observes sur l'image de droite."|trans }}</h5>
+
+		<div
+			class="swiper-container__wrapper">
+
+			<!-- Slider main container -->
+			<div
+				id="game_swiper-container" class="swiper-container">
+
+				<!-- Additional required wrapper -->
+				<div
+					id="block-images" class="swiper-wrapper">
+
+					<!-- Slides -->
+					<div class="block-image swiper-slide">
+						<img class="image" src="{{ asset('assets/img/game1_OK_V2.png') }}" alt="Image errors free">
+					</div>
+
+					<div id="game-area" class="block-image swiper-slide">
+						<img id="image-with-errors" class="image" src="{{ asset('assets/img/game1_DOWN_V3-VIDE 1.png') }}" alt="Image with 2 errors">
+						<img id="image_rideau" class="image-with-error-parts image_rideau" src="{{ asset('assets/img/game1_rideau.png') }}" alt="Image with errors">
+						<img class="image-with-error-parts image_bierre" src="{{ asset('assets/img/game1_bierre.png') }}" alt="Image with errors">
+						<img class="image-with-error-parts image_plante" src="{{ asset('assets/img/game1_plante.png') }}" alt="Image with errors">
+						<img id="image_margot" class="image-with-error-parts image_margot" src="{{ asset('assets/img/game1_margot.svg') }}" alt="Image with errors" usemap="#workmap">
+						<img class="image-with-error-parts image_iphone" src="{{ asset('assets/img/game1_iphone.png') }}" alt="Image with errors">
+
+						<map name="workmap">
+							<area shape="poly" coords="130,381,148,349,158,333,161,304,164,280,162,253,161,235,170,215,175,202,197,194,204,177,197,146,192,117,185,96,172,83,156,77,152,61,148,39,137,10,124,2,109,6,94,19,90,43,89,71,84,81,71,86,63,106,61,120,58,141,59,153,73,163,71,176,60,185,42,197,22,208,11,218,0,237,4,257,22,275,39,294,48,304,62,322,66,329,66,344,77,348,110,366,108,377,119,380" alt="Computer">
+						</map>
+					</div>
+				</div>
+
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<h2>
+			<span id="found_areas"></span>
+			{{ 'signes trouvé(s) sur'|trans }}
+			<span>
+				5</span>
+		</h2>
+	</section>
+
+	<section class="hidden_content">
+		<div class="game_step_zero">
+			<div class="modal_subtitle">
+				<p>{{ "Manque d'énergie"|trans }}</p>
+			</div>
+
+			<div class="modal_content">
+				<p>{{ "En gros, ça ressemble à de la grande fatigue, des difficultés à réaliser les activités du quotidien. Ce manque d’énergie peut s’accompagner d’insomnies ou d’hypersomnies (trop dormir), d’une perte d’appétit ou au contraire d’une tendance à manger plus. Ça te parle ? "|trans }}</p>
+
+			</div>
+		</div>
+
+		<div class="game_step_one">
+			<div class="modal_subtitle">
+				<p>{{ 'Peurs ou inquiétudes excessives'|trans }}</p>
+			</div>
+
+			<div class="modal_content">
+				<p>{{ "C'est ressentir une peur difficile à identifier ou à relier à une cause concrète. Cette peur peut devenir envahissante et conduire à des crises d’angoisse ou des attaques de paniques. Tu connais quelqu'un qui vit ça ?"|trans }}</p>
+			</div>
+		</div>
+
+		<div class="game_step_two">
+			<div class="modal_subtitle">
+				<p>{{ "Augmentation de la consommation d'alcool"|trans }}</p>
+			</div>
+
+			<div class="modal_content">
+				<p>{{ "Consommer plus d’alcool ou d’autres substances peut être le signe que les angoisses deviennent trop difficiles à gérer. C'est souvent une façon d'essayer de calmer l'anxiété."|trans }}</p>
+			</div>
+		</div>
+
+		<div class="game_step_three">
+			<div class="modal_subtitle">
+				<p>{{ "Perte d'intérêt"|trans }}</p>
+			</div>
+
+			<div class="modal_content">
+				<p>{{ "On parle de difficultés à faire des projets ou à s’investir dans des activités habituellement appréciées, ça peut-être aussi une perte de sens dans la vie qui peut amener la personne à avoir des idées noires, troublantes et envahissantes."|trans }}</p>
+			</div>
+		</div>
+
+		<div class="game_step_four">
+			<div class="modal_subtitle">
+				<p>{{ "Difficultés à gérer ses émotions."|trans }}</p>
+			</div>
+
+			<div class="modal_content">
+				<p>{{ '"Irritabilité, impatience, confusion, nervosité inhabituelles. Se sentir en colère, coupable, impuissant ou même indifférent (sorte d’anesthésie émotionnelle). Ces difficultés à réguler ses émotions peuvent conduire à des comportements décalés vis-à-vis des autres. Et du coup, on a de plus en plus de mal à se comprendre…"'|trans }}</p>
+			</div>
+		</div>
+
+	</section>
+
+	{% include 'partials/components/_game_modal.html.twig' with {'field': game_title } %}
+
+{% endblock %}

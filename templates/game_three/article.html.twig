@@ -1,0 +1,244 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'GAME 3'|trans }}
+{% endblock %}
+{% set page_title = '3· Trouver de l’aide'|trans %}
+
+{% block body %}
+	<article id="game_one_article">
+		<div class="blog game_one_article">
+			{% include 'partials/components/_sticky_menu_share.html.twig' %}
+
+			<div id="progress-container">
+				<div id="progress-bar"></div>
+			</div>
+
+			<section class="article_game">
+				<div class="article_hero">
+					<h1>{{ 'Trouver de l’aide'|trans }}</h1>
+
+					<img src="{{ asset('assets/img/game3.png') }}" alt="Game 1 article hero">
+
+					{% include 'partials/components/_sticky_menu_share.html.twig' %}
+				</div>
+				<div class="article_grid">
+					<div class="article_grid_gallery"></div>
+					<div class="article_grid_info small">
+						<h5 id="sinformer" class="article_info_title">
+							<b>{{ 'S’informer : des sites et des applis pour en apprendre plus'|trans }}</b>
+						</h5>
+						<p>
+							<a href="https://www.unafam.org/" target="_blank">
+								<b>
+									<u>{{ 'www.unafam.org'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<p>{{ 'Une association qui soutient et accompagne les proches de personnes ayant des troubles psychiques. De nombreuses informations disponibles sur leur site.'|trans }}</p>
+						<br>
+						<p>
+							<a href="https://www.filsantejeunes.com/" target="_blank">
+								<b>
+									<u>{{ 'www.filsantejeunes.com'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<p>{{ 'Un site qui répond aux questions de santé que se posent les jeunes'|trans }}</p>
+						<br>
+						<p>
+							<a href="https://www.psycom.org/" target="_blank">
+								<b>
+									<u>{{ 'www.psycom.org'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<p>{{ 'Un site très complet sur la santé mentale'|trans }}</p>
+						<br>
+						<h5 class="article_info_title">
+							<b>{{ 'Sites dédiés aux étudiants'|trans }}</b>
+						</h5>
+						<p>
+							<a href="https://www.soutien-etudiant.info/" target="_blank">
+								<b>
+									<u>{{ 'https://www.soutien-etudiant.info/ '|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<br>
+						<p>
+							<a href="http://ecouteetudiants-iledefrance.fr/home" target="_blank">
+								<b>
+									<u>{{ 'http://ecouteetudiants-iledefrance.fr/home'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<br>
+						<h5 class="article_info_title">
+							<b>{{ 'Appli'|trans }}</b>
+						</h5>
+						<p>{{ 'Mon sherpa, pour découvrir l’app :'|trans }}</p>
+						<br>
+						<div class="video">
+							<iframe width="602" height="358" src="https://www.youtube.com/embed/wZ75FWkbZro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="article_content">
+				<div class="article_grid_info small">
+					<h5 id="oser_en_parler" class="article_info_title">
+						<b>{{ 'Oser en parler - Des lignes d’écoute pour mettre des mots sur des maux'|trans }}</h5>
+						<p>
+							<ul class="article_puce">
+								<li>{{ 'Ligne d’écoute Unafam :'|trans }}<a class="phone_number" href="tel:+01 42 63 03 03">01 42 63 03 03</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ 'Gratuite et anonyme, ouverte du lundi au vendredi, de'|trans }}
+							<b>{{ '9h'|trans }}</b>
+							{{'à'|trans }}
+							<b>{{ '13h'|trans }}</b>
+							{{ 'et de'|trans }}
+							<b>{{ '14h'|trans }}</b>
+							{{ 'à'|trans }}
+							<b>{{ '18h'|trans }}</b>
+							{{ '(17h le vendredi)'|trans }}.
+						</p>
+						<p class="article_text">{{ 'Des psychologues offrent un espace de confiance dans un cadre protecteur et confidentiel aux personnes souffrant de mal-être psychique et à leur entourage.'|trans }}</p>
+						<br>
+						<p>
+							<ul class="article_puce">
+								<li>{{ 'Suicide écoute :'|trans }}<a class="phone_number" href="tel:+01 45 39 40 00">01 45 39 40 00</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ 'Gratuite et anonyme, ouverte 24h/24 – 7j /7.'|trans }}</p>
+						<p class="article_text">{{ "Des bénévoles formés offrent une écoute aux personnes qui souffrent tant psychologiquement que physiquement, qu'elles envisagent un passage à l'acte ou non."|trans }}</p>
+						<p class="article_text">{{ "Les proches de personnes ayant des idées suicidaires, ceux qui ont vécu le suicide d'un être aimé, ou le redoutent, peuvent également appeler Suicide écoute."|trans }}</p>
+						<br>
+						<p>
+							<ul class="article_puce">
+								<li>{{ 'Les Nightlines France : '|trans }}
+									<a href="https://www.nightline.fr/services-decoute" target="_blank">
+										<b>
+											<u>{{ 'https://www.nightline.fr/services-decoute'|trans }}</u>
+										</b>
+									</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ 'Gratuites et anonymes, ouvertes de 21h à 2h30 par tchat ou téléphone.'|trans }}</p>
+						<p class="article_text">{{ 'Un service d’écoute nocturne, par des étudiants pour des étudiants, offrant un cadre bienveillant pour libérer la parole.'|trans }}</p>
+						<br>
+						<h5 id="sefaire_accompagner" class="article_info_title">{{ 'Se faire accompagner : Rencontrer des professionnels pour prévenir et soigner'|trans }}</h5>
+						
+						<p>
+							<ul class="article_puce">
+								<li>{{ 'Points d’Accueil Ecoute Jeunes (PAEJ) :'|trans }}
+									<a href="https://anpaej.fr/" target="_blank">
+										<b>
+											<u>{{ 'www.anpaej.fr'|trans }}</u>
+										</b>
+									</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ 'Ils s’adressent aux adolescents et jeunes majeurs de '|trans }}
+							<b>{{ '12 à 25 ans'|trans }}</b>
+							{{ 'rencontrant des difficultés : mal être, conflits familiaux, échec scolaire, violences, consommation de produits psychoactifs, isolement, troubles psychiques... Ils prennent en charge la prévention des conduites à risques des jeunes, qu’il s’agisse du risque de désocialisation ou de risques pour la santé.'|trans }}</p>
+						<p class="article_text">{{ "L'accueil est organisé pour permettre un accès sans condition, il est gratuit et anonyme."|trans }}</p>
+						<p class="article_text">{{ "Liste des PAEJ :"|trans }}
+							<a href="https://anpaej.fr/les-paej/" target="_blank">
+								<b>
+									<u>{{ 'https://anpaej.fr/les-paej/'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<br>
+						<p>
+							<ul class="article_puce">
+								<li>{{ "Maison Des Adolescents (MDA) :"|trans }}
+									<a href="https://www.anmda.fr/" target="_blank">
+										<b>
+											<u>{{ 'www.anmda.fr'|trans }}</u>
+										</b>
+									</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ "La Maison des Adolescents est un lieu qui accueille les adolescents de 11 à 25 ans (l’âge dépend des structures). Ses missions sont l’accueil, l’écoute, l’information, l’orientation, l’évaluation des situations, la prise en charge médicale et psychologique, l’accompagnement éducatif, social et juridique."|trans }}</p>
+						
+						<p class="article_text">{{ "La MDA a pour mission de répondre aux questions que se posent les adolescents : relations aux autres, problèmes de famille, amis, mal-être, corps, puberté, sexualité, consommation de drogues, violence, 	prise de risques. Les accompagnements sont gratuits et anonymes si les jeunes le souhaitent."|trans }}</p>
+						<p class="article_text">{{ "Pour prendre un RDV en ligne :"|trans }}
+							<a href="https://mdav-ados.fr" target="_blank">
+								<b>
+									<u>{{ 'https://mdav-ados.fr'|trans }}</u>
+								</b>
+							</a>
+						</p>
+						<br>
+						<p>
+							<ul class="article_puce">
+								<li>{{ 'Les Missions Locales :'|trans }}
+									<a href="https://www.mission-locale.fr/" target="_blank">
+										<b>
+											<u>{{ 'https://www.mission-locale.fr/'|trans }}</u>
+										</b>
+									</a>
+								</li>
+							</ul>
+						</p>
+						<p class="article_text">{{ "Elles disposent d’un référent santé chargé d’accueillir les jeunes de 16 à 25 éprouvant des difficultés psychiques rendant difficile leur insertion dans un parcours professionnel."|trans }}</p>
+						<br>
+							<p>
+								<ul class="article_puce">
+									<li>{{ 'Médecins généralistes :'|trans }}</li>
+								</ul>
+							</p>
+						<p class="article_text">{{ 'Professionnels de proximité qui vous connaissent bien. Ils sont à même d’écouter vos difficultés et peuvent vous orienter vers les services dont vous avez besoin.'|trans }}</p>
+					</br>
+					<p>
+						<ul class="article_puce">
+							<li>{{ 'Forfait 100% psy enfants :'|trans }}</li>
+						</ul>
+					</p>
+					<p class="article_text">{{ 'L’état met place un dispositif permettant aux mineurs de 3 à 17 ans de bénéficier de
+10 séances gratuites chez un psychologue.'|trans }}</p>
+						<br>
+					<p>
+						<ul class="article_puce">
+							<li>{{ 'Santé psy étudiants :'|trans }}</li>
+						</ul>
+					</p>
+				<p class="article_text">{{ 'L’état a mis en place un dispositif permettant aux étudiants de bénéficier de 3 consultations gratuites de psychologues. Pour savoir comment ça se passe :'|trans }}
+					<a href="https://santepsy.etudiant.gouv.fr/" target="_blank">
+						<b>
+							<u>{{ 'https://santepsy.etudiant.gouv.fr/'|trans }}</u>
+						</b>
+					</a>
+				</p>
+			</br>
+			<p>
+				<ul class="article_puce">
+					<li>{{ 'Les Services Universitaires de Médecine Préventive et de Promotion de la Santé (SUMPPS) :'|trans }}</li>
+				</ul>
+			</p>
+			<p class="article_text">{{ 'Ils ont pour missions d’assurer auprès des étudiants : des visites médicales de prévention, des consultations médicales, la prise en charge d’urgences médicales et des entretiens avec des psychologues.'|trans }}</p>
+		</br>
+		<p>
+			<ul class="article_puce">
+				<li>{{ 'Les Bureaux d’Aide Psychologique Universitaires (BAPU) :'|trans }}</li>
+			</ul>
+		</p>
+	
+	<p class="article_text">{{ 'Ils reçoivent des étudiants, à leur demande, pour leur apporter une aide psychologique. Des psychiatres, psychologues et assistantes sociales, proposent des entretiens et consultations.'|trans }}</p>
+
+
+<p class="article_text">{{ 'Service de santé des CFA (Centres de Formation pour Apprentis) : 15 - 25 ans. Certains CFA disposent de consultations effectuées par des psychologues ou des travailleurs sociaux au sein des établissements.'|trans }}</p></br><p>
+
+<ul class="article_puce">
+	<li>{{ 'Au sein des lycées :'|trans }}</li>
+</ul></p><p class="article_text">{{ 'Des professionnels sont à votre écoute et disponibles pour vous accueillir : infirmières scolaires, psychologues de l’éducation nationale, médecins scolaires…'|trans }}</p></div></section></div></article>{% endblock %}

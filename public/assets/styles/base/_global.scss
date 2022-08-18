@@ -1,0 +1,173 @@
+/*------------------------------------------------------------------
+[Fonts] 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/*------------------------------------------------------------------
+[Colors] 
+*/
+$pink: #f32d66;
+$green: #23a497;
+$orange: #ff4811;
+
+/*------------------------------------------------------------------
+[Variables] 
+*/
+$blackHedearHeight : 63px;
+
+/*------------------------------------------------------------------
+[Resets] 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #ffffff;
+
+    @include breakpoint(mobile) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 71px;
+    line-height: 83px;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 40px;
+        line-height: 54px;
+    }
+
+    @include breakpoint(mobile-s) {
+        font-size: 35px;
+        line-height: 44px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+
+    &:visited {
+        color: #fff;
+    }
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+/*------------------------------------------------------------------
+[Utilities] 
+*/
+.no-scroll {
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 10px;
+
+    @include breakpoint(tablet) {
+        max-width: 661px;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: 337px;
+    }
+
+    @include breakpoint(mobile-s) {
+        max-width: 299px;
+    }
+}
+
+.bottom_right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.text_center {
+    text-align: center;
+    margin: auto;
+}
+
+.green_bg {
+    background-color: $green;
+}
+
+.orange_bg {
+    background-color: $orange;
+}
+
+.pink_bg{
+    background-color: $pink;
+}
+
+.pink {
+    color: $pink;
+}
+
+.orange {
+    color: $orange;
+}
+
+.green {
+    color: $green;
+}
+
+.hidden_content {
+    display: none !important;
+}
+
+@include breakpoint(tablet) {
+    .hidden_content_mobile {
+        display: none !important;
+    }
+}
+
+@include breakpoint-reverse(tablet) {
+    .hidden_content_desktop {
+        display: none !important;
+    }
+}
+
+.colored_bg {
+    background: -webkit-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -webkit-linear-gradient(141deg, $pink 61%, $orange 51%) !important;
+    background: -o-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -o-linear-gradient(141deg, $pink 61%, $orange 51%) !important;
+    background: -moz-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -moz-linear-gradient(141deg, $pink 61%, $orange 51%) !important;
+    background: linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(141deg, $pink 61%, $orange 51%) !important;
+}
+
+.green-check {
+    position: absolute;
+}

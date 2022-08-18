@@ -1,0 +1,32 @@
+<!-- The Modal -->
+<div
+	id="myModal" class="modal">
+	<div id="modal_bg" class="modal_bg"></div>
+	<!-- Modal content -->
+	<div class="modal_card">
+		<span class="close">&times;</span>
+		<div class="modal_inner">
+			<div class="modal_title">
+				<span class="icon_image">
+					{% if 'game_one_game' in app.request.get('_route') %}
+						<img class="image" src="{{ asset('assets/img/icon_image.svg') }}" alt="Vous avez repéré un signe">
+					{% else %}
+						<svg width="18" height="16" viewbox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10 13H10.5L12 14.5L13.5 13H14" stroke="black"/>
+							<path d="M10 13L3 13C1.89543 13 1 12.1046 1 11L1 3C1 1.89543 1.89543 1 3 1L15 1C16.1046 1 17 1.89543 17 3V11C17 12.1046 16.1046 13 15 13L13.5 13" stroke="black"/>
+							<rect x="4" y="5" width="10" height="1" fill="black"/>
+							<rect x="4" y="8" width="7" height="1" fill="black"/>
+						</svg>
+					{% endif %}
+				</span>
+				<h6>{{ field }}</h6>
+			</div>
+			<div>
+				<div id="modal_subtitle"></div>
+				<div id="modal_content"></div>
+			</div>
+		</div>
+	</div>
+
+	<button id="continue" class="hidden_content btn btn_black">{{ 'Rééssayer'|trans }}</button>
+</div>

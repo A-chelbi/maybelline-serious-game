@@ -1,0 +1,498 @@
+/*------------------------------------------------------------------
+[Nav bar] 
+*/
+.navbar {
+    padding: 14px 7.5vw;
+    background: transparent;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+        padding: 40px 22px;
+
+        .btn {
+            position: absolute;
+            z-index: 10;
+            bottom: 26%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 14px 17px;
+        margin: auto;
+
+        .btn {
+            bottom: 174px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    @include breakpoint(mobile-s) {
+        .btn {
+            bottom: 148px;
+        }
+    }
+
+    &.nav-lg {
+        background: rgba($color: #000000, $alpha: 0.7);
+        padding: 14px 109px;
+        transition: ease-in-out 0.5s;
+        max-height: 83px;
+
+        @include breakpoint(tablet) {
+            padding: 6px 22px;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 14px 17px;
+        }
+    }
+
+    &.active {
+        @include breakpoint(mobile) {
+            padding: 14px 17px;
+        }
+
+        &.nav-lg{
+            max-height: 100vh;
+        
+
+            @include breakpoint(tablet) {
+                padding: 40px 22px;
+            }
+
+            @include breakpoint(mobile) {
+                padding: 14px 22px;
+            }
+            
+        }
+    }
+}
+
+.logo_group {
+    max-width: 118px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        z-index: 998;
+    }
+
+    img {
+        max-width: 118px;
+        transition: ease-in-out 0.5s;
+
+        &:first-child{
+            max-width: 60px;
+        }
+    }
+}
+
+.nav {
+    padding-top: 15px;
+
+    @include breakpoint(tablet) {
+        padding-top: 0;
+        visibility: hidden;
+    }
+
+    &::before {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background: $pink;
+        transition: all 500ms ease-in-out;
+
+        clip-path: circle(30px at calc(100% - 65px) 65px);
+        visibility: hidden;
+    }
+}
+
+.nav-tgl {
+    display: none;
+
+    @include breakpoint(tablet) {
+        display: inline-block;
+    }
+
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    right: 32px;
+    top: 25px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: transparent;
+    line-height: 0.6;
+    text-align: right;
+
+    @include breakpoint(mobile) {
+        top: 35px;
+    }
+
+    // making the dividers
+    > span {
+        // the second divider
+        display: inline-block;
+        position: relative;
+        height: 4px;
+        width: 29px;
+        border-radius: 1px;
+        background: #fff;
+        vertical-align: middle;
+
+        // the first & the third dividers
+        &::before,
+        &:after {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            height: 4px;
+            border-radius: 1px;
+            width: 29px;
+            background: #fff;
+            left: 0;
+            transition: all 200ms;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.start_game_nav {
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}
+
+// when it gets activated
+.menu.active {
+    .nav {
+        @include breakpoint(tablet) {
+            visibility: visible;
+            transition: all 1s;
+        }
+    }
+
+    .nav::before {
+        visibility: visible;
+        clip-path: circle(100%);
+    }
+
+    .nav-tgl > span {
+        height: 0;
+        &::after,
+        &::before {
+            top: 0px;
+            left: 0;
+            width: 34px;
+        }
+
+        &::after {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    .nav_footer {
+        @include breakpoint(tablet) {
+            margin-top: 71vh;
+            width: 100%;
+            z-index: 998;
+            display: block;
+
+            * {
+                opacity: 1;
+                transition: all 2s;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: 68vh;
+        }
+
+        @include breakpoint(mobile-s) {
+            margin-top: 126%;
+        }
+    }
+
+    .nav_items {
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    .start_game_nav {
+        @include breakpoint(tablet) {
+            display: block;
+        }
+    }
+}
+
+.nav_items {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    justify-content: center;
+
+    li {
+        padding-right: 20px;
+
+        @include breakpoint(tablet) {
+            padding-right: 0;
+            margin-bottom: 35px;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        @include breakpoint(mobile){
+            margin-bottom: 26px;
+        }
+
+        @include breakpoint(mobile-s){
+            margin-bottom: 15px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        margin: 25vh auto 0;
+        width: 100%;
+        opacity: 0;
+
+        &.row {
+            flex-direction: column;
+        }
+
+        a {
+            font-size: 36px;
+            line-height: 41px;
+
+            @include breakpoint(mobile-s) {
+                font-size: 31px;
+                line-height: 39px;
+            }
+        }
+    }
+
+    li > a.active {
+        border-bottom: 2px solid #fff;
+        font-weight: bold;
+    }
+}
+
+// Nav footer in burger menu
+.nav_footer {
+    display: none;
+
+    * {
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .nav_footer_text {
+        text-align: center;
+        margin-bottom: 23px;
+    }
+
+    .share__info {
+        display: flex;
+        justify-content: center;
+        margin-top: 26px;
+
+        a:first-child, a:nth-child(2) {
+            padding: 0px 17px 1px 0;
+        }
+    }
+}
+
+.black_and_white {
+    color: #000;
+    transition: all 0.4s;
+
+    a {
+        color: #000;
+
+        &:hover {
+            border-color: #000;
+        }
+
+        @include breakpoint(tablet) {
+            color: #fff;
+
+            &:hover {
+                border-color: #fff;
+            }
+        }
+    }
+
+    li > a.active {
+        border-color: #000;
+
+        @include breakpoint(tablet) {
+            border-color: #fff;
+        }
+    }
+
+    &.nav-tgl > span {
+        background: #000;
+
+        &::after,
+        &::before {
+            background: #000;
+        }
+    }
+
+    .nav-lg & {
+        &.nav-tgl > span {
+            background: #fff;
+
+            &::after,
+            &::before {
+                background: #fff;
+            }
+        }
+    }
+
+    .menu.active & {
+        color: #fff;
+        transition: all 0.4s;
+
+        &.nav-tgl > span {
+            background: #fff;
+
+            &::after,
+            &::before {
+                background: #fff;
+            }
+        }
+    }
+}
+
+// Nav on scroll
+.nav-lg {
+    .logo_group {
+        margin-top: -5px;
+
+        @include breakpoint(tablet) {
+            margin-top: 0;
+        }
+
+        img {
+            transition: ease-in-out 0.5s;
+        }
+    }
+
+    .nav {
+        padding-top: 0;
+    }
+}
+
+/*------------------------------------------------------------------
+[Black header] 
+*/
+
+.black_header {
+    background: #000;
+    position: fixed;
+    top: 0;
+    height: $blackHedearHeight;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 45px;
+    text-transform: uppercase;
+
+    .next_arrow_link {
+        display: none;
+
+        @include breakpoint(mobile) {
+            display: inline-block;
+        }
+    }
+
+    .next_arrow_link,
+    .btn {
+        justify-self: flex-end;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .btn {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 10px 20px;
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .bold_title {
+        font-weight: bold;
+    }
+
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+
+        @include breakpoint(mobile) {
+            flex-direction: column;
+        }
+    }
+}
+
+.menu.active {
+    .btn_black {
+        @include breakpoint(mobile) {
+            color: $pink !important;
+        }
+    }
+
+    .btn_bg_black {
+        @include breakpoint(mobile) {
+            color: $pink !important;
+            background-color: #fff;
+            border-color: #fff;
+        }
+    }
+}

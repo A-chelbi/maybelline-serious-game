@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'Repérer les signes'|trans }}
+{% endblock %}
+{% set page_title = '1 · Repérer les signes'|trans %}
+
+{% block body %}
+	<section class="game_one_intro single_game_intro green_bg">
+		<div class="container">
+			<div class="game_one_hero">
+				<h1><span class="pink">{{ 'RePéRER LES SIGNES'|trans }}</span></h1>
+				<p>{{ "25% de la population souffre d'anxiété ou de dépression mais ça ne se voit pas au premier regard. Apprends à repérer les signes. "|trans }}</p>
+				<br>
+				<p>{{ 'Clique sur les différences entre les deux images.'|trans }}</p>
+
+				<div class="ready_btn">
+					<a href="{{ path('game_one_game') }}" class="btn btn_green">{{ ' Commencer'|trans }}</a>
+				</div>
+			</div>
+		</div>
+		
+		<img class="bottom_left_bg" src="{{ asset('assets/img/game1_intro.png') }}" alt="RePéRER LES SIGNES.">
+	</section>
+{% endblock %}

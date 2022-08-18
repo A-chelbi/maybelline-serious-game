@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '1 · RepÉrer les signes: Sucess'|trans }}
+{% endblock %}
+{% set page_title = '1 · RepÉrer les signes'|trans %}
+
+{% block body %}
+	<section class="game_one_success green_bg">
+		<img class="bottom_left_bg" src="{{ asset('assets/img/bg_home_talkAoutIt.png') }}" alt="RePéRER LES SIGNES.">
+
+		<div class="container">
+			<div class="game_one_hero">
+				<h1>{{ 'Maintenant,'|trans }}
+					<span class="pink">{{ 'tu sais mieux repérer les signes'|trans }}</span>
+				</h1>
+				<p>{{ "Au delà des signes, il est important d'être attentif aux changements d'habitudes et attitudes. Continue l'expérience pour en savoir plus et apprendre à choisir les mots."|trans }}</p>
+
+				<div class="ready_btn">
+					<a href="{{ path('game_one_article') }}" class="btn btn_green">{{ 'Continuer'|trans }}</a>
+					{% include 'partials/components/_sticky_menu_share.html.twig' %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

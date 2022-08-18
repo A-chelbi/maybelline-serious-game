@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'Blog'|trans }}
+{% endblock %}
+
+{% block body %}
+	<div class="blog">
+		{% include 'partials/components/_sticky_menu_share.html.twig' %}
+
+		<section class="article_game">
+			<div class="article_hero">
+				<img src="{{ asset('assets/img/bg_home_talkAoutIt.png') }}" alt="blog article hero">
+				{% include 'partials/components/_sticky_menu_share.html.twig' %}
+			</div>
+
+			<div class="article_grid">
+				<div class="article_grid_gallery"></div>
+
+				<div class="article_grid_info">
+					<h5>{{ "Chez les 18-24 ans, près d’1 sur 3 déclare être concerné par un problème de santé mentale, en particulier la dépression et les troubles anxieux"|trans }} <sup class="sup">1</sup> .</h5>
+					<br/>
+				</div>
+			</div>
+		</section>
+
+		<section class="article_content">
+
+
+			<div class="article_grid_info">
+				<h2>{{ 'Qu’est-ce-que'|trans }}
+				<br/>{{ 'la santé mentale ?'|trans }}</h2>
+
+				<p>{{ "La santé mentale est une composante de notre santé dont nous devons prendre soin au même titre que notre santé physique. L’Organisation Mondiale de la Santé (OMS) définit la santé comme « un état de complet bien-être physique, mental et social, et ne consiste pas seulement en une absence de maladie ou d’infirmité. »"|trans }}</p>
+				<p>
+					{{ "Tout au long de notre vie, nous naviguons tous d’une bonne santé mentale à une santé mentale fragile."|trans }}</p>
+			</div>
+
+			<div class="article_grid_info small">
+				<h2 class="title_left">{{ "“UNE BONNE SANTÉ MENTALE PERMET AUX INDIVIDUS DE SE RÉALISER, DE SURMONTER LES TENSIONS NORMALES DE LA VIE, D'ACCOMPLIR UN TRAVAIL PRODUCTIF ET DE CONTRIBUER À LA VIE DE LEUR COMMUNAUTÉ”"|trans }}</h2>
+			</div>
+			<div class="article_grid_info">
+				<div class="video">
+					<iframe width="602" height="358" src="https://www.youtube.com/embed/Ne_KHiLdvZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="article_grid_info">
+				<h2>{{ 'Qu’est-ce-que'|trans }}
+				<br/>{{ 'La dépression et l’anxiété ?'|trans }}</h2>
+				<p>{{ "Se sentir triste, moins dynamique que d’habitude, avoir moins envie de faire des choses, être anxieux avant un examen ou encore être préoccupé par son avenir est tout à fait normal. Ces périodes sont même nécessaires dans la vie, elles sont d’ailleurs souvent l’occasion de doutes, d’hésitations, de questionnements qui permettent à la personne de préparer des projets futurs."|trans }}</p>
+				<br>
+				<p>
+					{{ "En revanche, quand cette période de ralentissement se prolonge, que cette tristesse devient envahissante et empêche de partager et de profiter de ses amis, de sa famille, que la personne n’a plus goût à rien, qu’elle a du mal à se lever, à sortir de chez elle, qu’elle a des changements d’humeurs ou encore qu’elle se met à avoir peur très souvent sans raison particulière, cela peut-être le signe d’un trouble anxieux ou dépressif."|trans }}</p>
+				<br>
+				<p>
+					{{ "Il est fréquent que les troubles anxieux et dépressifs soient présents chez une même personne au cours d’une même période."|trans }}</p>
+			</div>
+			<div class="article_grid_info small article_position">
+
+				<h2>{{ "Le repérage précoce :"|trans }}
+				<br/>{{ "Un enjeu majeur"|trans }}</h2>
+
+				<p>{{ 'Les jeunes de 18 à 24 ans sont plus à risques de développer un trouble psychique que le reste de la population². Or Plus d’1 jeune sur 2 déclare ne pas savoir quels professionnels de santé consulter en cas de questions sur sa santé mentale¹.'|trans }}</p>
+				<br>
+				<p>{{ 'Apprendre à repérer les signes de dépression et de troubles anxieux chez ceux qui nous entourent, les aider à trouver de l’aide, c’est favoriser leur prise en charge précoce et leur rétablissement. C’est tout l’esprit de BraveTogether.'|trans }}</p>
+				<br>
+
+				<div class="face_and_citation">	
+				<img class="author_face" src="{{ asset('assets/img/marie.png') }}" alt="Marie-Jeanne">
+				<h3 class="title_left right_title_position">{{ '“Brave Together doit contribuer au repérage et à la prise en charge'|trans }}</h3>
+				</div>
+				<h3 class="title_left bottom_title_position">{{ 'précoce des situations de détresse psychique sans tabou ni préjugés. Une noble ambition autant qu’une nécessité. La santé mentale nous concerne tous.”'|trans }}</h3>
+				
+				<img class="tablet_author_face" src="{{ asset('assets/img/marie.png') }}" alt="Marie-Jeanne">
+				<span class="article_author">{{ 'Marie-Jeanne Richard'|trans }}</span><br>
+				<span class="article_author">{{ '– Présidente de l’Unafam.'|trans }}</span>
+			</div>
+			<div class="article_grid_info">
+				<p class="article_text_small">{{ '1 - Enquête fondaMental Ipsos décembre 2020'|trans }}</p>
+				<p class="article_text_small">{{ '2 - 75% des troubles psychiques se déclarent avant l’âge de 25 ans (Source : Etude Movan Y, Frajerman A 2020. La santé mentale des étudiants : mieux prendre la mesure et considérer les enjeux, Encéphale.'|trans }}</p>
+				<br><br>
+				<a href="{{ path('blog_one') }}" class="btn btn_orange cta_button">{{ "Repérer les signes"|trans }}</a><br><br><br>
+			</div>
+		</section>
+	</div>
+{% endblock %}

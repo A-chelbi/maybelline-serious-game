@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '3 · Trouver de l’aide'|trans }}
+{% endblock %}
+{% set page_title = '3 · Trouver de l’aide'|trans %}
+
+{% block body %}
+	<section class="game_three_intro single_game_intro pink_bg">
+		<div class="container">
+			<div class="game_one_hero">
+				<h1><span class="green">{{ 'Trouver de l’aide'|trans }}</span></h1>
+				<p>{{ "De nombreuses ressources sont à disposition des personnes cherchant de l’aide et des personnes qui souhaitent aider. Elles permettent à chacun de trouver des réponses à ses questions selon ses besoins."|trans }}</p>
+				<br>
+				<p>{{ 'Clique sur les deux images pour reconstituer les paires.'|trans }}</p>
+
+				<div class="ready_btn">
+					<a href="{{ path('game_three_game') }}" class="btn btn_pink">{{ 'Commencer'|trans }}</a>
+				</div>
+			</div>
+		</div>
+		
+		<img class="bottom_left_bg" src="{{ asset('assets/img/game3_intro.png') }}" alt="Choisir LES MOTS">
+	</section>
+{% endblock %}

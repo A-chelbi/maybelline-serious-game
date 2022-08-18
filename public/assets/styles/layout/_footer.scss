@@ -1,0 +1,145 @@
+/*------------------------------------------------------------------
+[Footer] 
+*/
+
+footer {
+    position: relative;
+    background: #000;
+    padding-top: 94px;
+    padding-bottom: 24px;
+
+    .footer_info {
+        height: auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include breakpoint(tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include breakpoint(mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 90px;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+
+        @include breakpoint(tablet) {
+            padding: 3px;
+        }
+
+        .image_container{
+            height: 47px;
+
+            @include breakpoint(tablet) {
+                max-width: 154px;
+            }
+
+            @include breakpoint(mobile) {
+                text-align: center ;
+                margin: auto;
+            }
+        }
+
+        #footer_brave_together_logo {
+            position: relative;
+            right: 10px;
+        }
+
+
+        img {
+            max-height: 50px;
+            width: auto;
+            margin-right: auto;
+
+            @include breakpoint(mobile) {
+                margin-left: auto;
+            }
+        }
+
+        p {
+            margin-top: 35px;
+        }
+
+        &:last-child {
+            img {
+                height: 35px;
+
+                @include breakpoint(tablet) {
+                    height: 24px;
+                }
+
+                @include breakpoint(mobile) {
+                    margin-right: auto;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+
+        &:nth-child(2) {
+            p {
+                font-size: 16px;
+                line-height: 26px;
+
+                @include breakpoint(tablet) {
+                    margin-top: 29px;
+                }
+            }
+        }
+
+        a {
+            margin-right: auto;
+            margin-top: 42px;
+
+            @include breakpoint(mobile) {
+                margin-left: auto;
+            }
+        }
+
+        .share__info{
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+        }
+    }
+
+    .footer_menu ul {
+        margin-top: 130px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include breakpoint(mobile) {
+            justify-content: center;
+        }
+
+        a {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 34px;
+            text-transform: uppercase;
+            margin-right: 20px;
+
+            @include breakpoint(tablet) {
+                margin-right: 10px;
+            }
+
+            @include breakpoint(mobile-s) {
+                font-size: 12px;
+            }
+        }
+    }
+}

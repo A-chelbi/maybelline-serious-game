@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '3 · Trouver de l’aide: Sucess'|trans }}
+{% endblock %}
+{% set page_title = '3 · Trouver de l’aide'|trans %}
+
+{% block body %}
+	<section class="hero general_intro game3_success">
+		<div class="hero_wrapper">
+			<div class="container">
+				<div class="hero_content">
+					<div class="logo_group">
+						<a href="{{ path('home') }}">
+							<img src="{{ asset('assets/img/logo_maybelline.svg') }}" alt="Maybelline logo"></img>
+							<img src="{{ asset('assets/img/logo_unafam.png') }}" alt="Unafam logo"></img>
+							<img src="{{ asset('assets/img/logo_braveTogether.png') }}" alt="Brave Together logo"></img>
+						</a>
+					</div>
+
+					<h1>{{ 'ENSEMBLE CONTRE L’anxiété et la dépression'|trans }}</h1>
+					<p>{{ 'Bravo tu fais maintenant parti de la communauté Brave Together  !'|trans }}</p>
+					<p>{{'Si tu veux en apprendre encore plus, l’experience continue sur'|trans }} <span> <a href="https://www.maybelline.fr/bravetogether" target="_blank" class="pink">www.maybelline.fr/bravetogether</a></span></p>
+
+					<div class="ready_btn">
+						<a href="{{ path('game_three_article') }}" class="btn btn_green">
+							{{ 'TROUVER DE L’AIDE'|trans }}
+						</a>
+						{% include 'partials/components/_sticky_menu_share.html.twig' %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<img class="bottom_left_bg" src="{{ asset('assets/img/bg_home_talkAoutIt.png') }}" alt="ENSEMBLE CONTRE L’anxiété et la dépression">
+
+	</section>
+{% endblock %}
+

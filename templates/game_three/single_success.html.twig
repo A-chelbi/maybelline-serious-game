@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ '3 · Trouver de l’aide: Sucess'|trans }}
+{% endblock %}
+{% set page_title = '3 · Trouver de l’aide'|trans %}
+
+{% block body %}
+	<section class="pink_bg single_success">
+
+		{% if 'one' == app.request.get('id') %}
+            {% include 'partials/components/game_three/_single_sucess_one.html.twig' %}
+		{% endif %}
+		
+		{% if 'two' == app.request.get('id') %}
+			{% include 'partials/components/game_three/_single_sucess_two.html.twig' %}
+		{% endif %}
+
+		{% if 'three' == app.request.get('id') %}
+			{% include 'partials/components/game_three/_single_sucess_three.html.twig' %}
+		{% endif %}
+
+		{% if 'four' == app.request.get('id') %}
+			{% include 'partials/components/game_three/_single_sucess_four.html.twig' %}
+		{% endif %}
+	</section>
+{% endblock %}

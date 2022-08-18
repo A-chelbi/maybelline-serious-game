@@ -1,0 +1,352 @@
+/*------------------------------------------------------------------
+[Homepage __Hero] 
+*/
+.hero {
+    position: relative;
+    margin-top: -221px;
+    min-height: 100vh;
+    padding-top: 221px;
+
+    background: -webkit-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -webkit-linear-gradient(141deg, $pink 61%, $orange 51%);
+    background: -o-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -o-linear-gradient(141deg, $pink 61%, $orange 51%);
+    background: -moz-linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        -moz-linear-gradient(141deg, $pink 61%, $orange 51%);
+    background: linear-gradient(30deg, $green 52%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(141deg, $pink 61%, $orange 51%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+
+    @include breakpoint(mobile) {
+        min-height: 116vh;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 97%);
+    }
+}
+
+.hero_wrapper {
+    margin-top: 194px;
+
+    @include breakpoint(mobile) {
+        margin-top: 50px;
+    }
+}
+
+.hero_content {
+    max-width: 757px;
+    padding-top: 126px;
+    padding-bottom: 261px;
+
+    @include breakpoint(tablet) {
+        padding-top: 58px;
+        padding-bottom: 348px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 91%;
+        padding-top: 126px;
+    }
+
+    @include breakpoint(mobile-s) {
+        padding-bottom: 111%;
+    }
+
+    p {
+        margin-top: 23px;
+        font-size: 24px;
+        line-height: 28px;
+
+        @include breakpoint(mobile) {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+}
+
+.bottom_right {
+    @include breakpoint(tablet) {
+        max-height: 355px;
+        width: auto;
+    }
+
+    @include breakpoint(mobile) {
+        max-height: 291px;
+    }
+}
+
+.bottom_left {
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background: $pink;
+    width: 422px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 23px;
+
+    @include breakpoint(tablet) {
+        bottom: -11px;
+    }
+
+    @include breakpoint(mobile) {
+        bottom: -11px;
+        width: 202px;
+        height: 135px;
+        z-index: -1;
+        background: $orange;
+    }
+
+    @include breakpoint(mobile-s) {
+        display: none;
+    }
+}
+
+.start_game_hero {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        margin: auto;
+        bottom: 221px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint(mobile-s) {
+        bottom: 195px;
+    }
+}
+
+/*------------------------------------------------------------------
+[Homepage __Section games] 
+*/
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 45px;
+
+    @include breakpoint(mobile) {
+        justify-content: center;
+    }
+
+    .game_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &:nth-child(1) {
+            .game_name {
+                color: $green;
+            }
+        }
+
+        &:nth-child(2) {
+            .game_name {
+                color: $orange;
+            }
+        }
+
+        &:nth-child(3) {
+            .game_name {
+                color: $pink;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 100px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            @include breakpoint(tablet) {
+                max-width: 200px;
+                height: auto;
+            }
+        }
+    }
+
+    .game_start_btn {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.game_name {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+    max-width: 10ch;
+}
+
+/*------------------------------------------------------------------
+[Homepage __About] 
+*/
+
+.about {
+    position: relative;
+    clip-path: polygon(0 10%, 100% 1%, 100% 100%, 0 89%);
+    background-color: $green;
+    padding-top: 50px;
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 10%, 100% 1%, 100% 100%, 0 95%);
+    }
+
+    .about_content {
+        max-width: 756px;
+        padding-top: 126px;
+        padding-bottom: 220px;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 91%;
+        }
+
+        h1 {
+            margin-bottom: 54px;
+        }
+
+        p {
+            max-width: 574px;
+        }
+    }
+
+    .about_btn {
+        margin-top: 59px;
+
+        @include breakpoint(mobile) {
+            text-align: center;
+            margin: 81px auto 41px;
+        }
+    }
+
+    .bottom_right {
+        max-height: 655px;
+        bottom: 30px;
+
+        @include breakpoint(tablet) {
+            max-height: 355px;
+            width: auto;
+
+            bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 324px;
+        }
+
+        @include breakpoint(mobile-s) {
+            max-height: 274px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------
+[Homepage __Talk About It] 
+*/
+
+.talk_aout_it {
+    position: relative;
+    background: $orange;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+    margin-top: -97px;
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+        margin-top: -48px;
+        min-height: 975px;
+    }
+
+    .talk_aout_it__info {
+        text-align: center;
+        padding: 100px 0;
+        max-width: 772px;
+        margin: auto;
+
+        @include breakpoint(tablet) {
+            padding: 135px 0 207px;
+        }
+
+        @include breakpoint(mobile) {
+            max-width: 349px;
+            padding: 100px 0;
+        }
+
+        p {
+            margin: 26px 0;
+
+            @include breakpoint(tablet) {
+                max-width: 478px;
+                margin: 26px auto;
+            }
+        }
+    }
+
+    .bottom_left_bg {
+        z-index: -1;
+
+        @include breakpoint(mobile) {
+            bottom: 0;
+        }
+    }
+}
+
+.bottom_left_bg {
+    position: absolute;
+    bottom: -16px;
+    left: 22px;
+    max-width: 392px;
+
+    @include breakpoint(tablet) {
+        left: 5px;
+        max-width: 351px;
+        z-index: -1;
+        bottom: -137px;
+    }
+
+    @include breakpoint(mobile) {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        max-width: 288px;
+        bottom: -163px;
+    }
+}
+
+.share__info {
+    margin-top: 39px;
+
+    a {
+        height: 26px;
+    }
+
+    a:first-child,
+    a:nth-child(2) {
+        margin-right: 23px;
+        padding: 10px 17px 1px 0;
+        border-right: 1px solid #fff;
+    }
+
+    a:first-child {
+        svg {
+            padding-top: 1px;
+        }
+    }
+
+    svg path {
+        fill: #fff;
+    }
+}

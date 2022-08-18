@@ -1,0 +1,116 @@
+.single_game_intro {
+    position: relative;
+    padding-top: 189px;
+    min-height: 100vh;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        padding-top: 231px;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: $blackHedearHeight;
+        min-height: 100vh;
+    }
+
+    .game_one_hero {
+        margin-left: auto;
+        max-width: 574px;
+        padding-bottom: 70px;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 548px;
+            margin: auto;
+        }
+
+        @include breakpoint(mobile) {
+            padding-top: 40px;
+            padding-bottom: 398px;
+        }
+
+        @include breakpoint(mobile-s) {
+            padding-top: 21px;
+        }
+
+        h1 {
+            margin-bottom: 87px;
+
+            @include breakpoint(mobile) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .ready_btn {
+        margin-top: 88px;
+
+        @include breakpoint(tablet) {
+            margin-top: 56px;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+}
+
+.game_one_intro .bottom_left_bg {
+    bottom: 0;
+    left: 0;
+    max-width: 680px;
+    max-height: 700px;
+    z-index: 1;
+
+    @include breakpoint(desktop) {
+        max-width: 452px;
+    }
+
+    @include breakpoint(tablet) {
+        max-width: 520px;
+        max-height: 618px;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: 333px;
+        left: 150px;
+    }
+}
+
+.game_two_intro {
+    .game_one_hero {
+        @include breakpoint(tablet) {
+            padding-bottom: 378px;
+        }
+
+        @include breakpoint(mobile) {
+            padding-bottom: 142px;
+        }
+
+        @include breakpoint(mobile-s) {
+            padding-bottom: 161px;
+        }
+    }
+    .bottom_left_bg {
+        bottom: 0;
+        left: 0;
+        max-width: 567px;
+        width: 48vw;
+
+        @include breakpoint(tablet) {
+            max-width: 381px;
+            z-index: 1;
+        }
+
+        @include breakpoint(mobile) {
+            left: 133px;
+        }
+    }
+
+    .ready_btn {
+        @include breakpoint(mobile) {
+            position: inherit;
+            transform: translateX(0);
+        }
+    }
+}

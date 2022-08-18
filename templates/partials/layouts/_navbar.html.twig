@@ -1,0 +1,41 @@
+<div id="menu" class="menu navbar row">
+	<button class="nav-tgl {% if 'blog' == app.request.get('_route') %}black_and_white{% endif %}" type="button" aria-label="toggle menu">
+		<span aria-hidden="true"></span>
+	</button>
+	
+	<div class="logo_group">
+		<a href="{{ path('home') }}">
+			<img id="maybelline_logo" src="{% if 'blog' == app.request.get('_route') %}{{ asset('assets/img/logo_maybelline_black.png') }} {% else %} {{ asset('assets/img/logo_maybelline.png') }} {% endif %}" alt="Maybelline logo"></img>
+			<img id="unafam_logo" src="{{ asset('assets/img/logo_unafam.svg') }}" alt="Unafam logo"></img>
+			<img id="braveTogether_logo" src="{% if 'blog' == app.request.get('_route') %}{{ asset('assets/img/logo_braveTogether_black.svg') }} {% else %} {{ asset('assets/img/logo_braveTogether.svg') }} {% endif %}" alt="Brave Together logo"></img>
+		</a>
+	</div>
+	
+	<nav class="nav row">
+		<ul class="nav_items row {% if 'blog' == app.request.get('_route') %}black_and_white{% endif %}">
+			<li>
+				<a href="{{ path('home') }}" class="{% if 'home' in app.request.get('_route') %}active{% endif %}">{{ 'BRAVE TOGETHER'|trans }}</a>
+			</li>
+
+			<li>
+				<a href="{{ path('blog_three') }}" class="{% if 'blog_three' == app.request.get('_route') %}active{% endif %}">{{ "BESOIN D'AIDE"|trans }}</a>
+			</li>
+
+			<li>
+				<a href="{{ path('blog') }}" class="{% if 'blog' == app.request.get('_route') %}active{% endif %}">{{ "S’informer"|trans }}</a>
+			</li>
+
+			<li>
+				<a href="https://www.unafam.org/" target="_blanc">{{ 'L’unAfam'|trans }}</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div class="start_game_nav">{% include 'partials/components/_start_game_btn.htm.twig' %}</div>
+	
+	<div class="nav_footer">
+		<div class="nav_footer_text">{{ 'Partagez le programme Brave Together sur les réseaux sociaux'|trans }}</div>
+
+		{% include 'partials/components/_social_media_links.html.twig' %}
+	</div>
+</div>
